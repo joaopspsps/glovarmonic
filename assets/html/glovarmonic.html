@@ -776,9 +776,7 @@
 
             function spotifyConnect() {
                 const clientId = "3c86428223f048f18928eb87cb86e9b2";
-                const redirectUri =
-                    "http://glovarmonic-{{ glovarmonic_id }}.local/glovarmonic"; // If using the web page from the ESP32
-                // "http://127.0.0.1:5500/assets/html/glovarmonic.html"; // If using the HTML file directly
+                const redirectUri = window.location;
                 const scopes =
                     "user-read-playback-state user-modify-playback-state";
                 const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${encodeURIComponent(redirectUri)}&scope=${encodeURIComponent(scopes)}`;
@@ -821,8 +819,8 @@
             function wsConnect() {
                 wsLog("Tentando se conectar...");
                 if (location.host) host = location.host;
-                // else host = "192.168.4.1";
-                else host = "glovarmonic-f9d108.local";
+                // else host = "192.168.4.1"; // For testing
+                else host = "glovarmonic-f9d108.local"; // For testing
                 return new WebSocket(`ws://${host}/ws`);
             }
 
