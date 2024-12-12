@@ -829,27 +829,27 @@
             // DOM elements
             // ============
 
-            const elemButtonCardsUpdateColorsBtn = document.getElementById(
+            window.elemButtonCardsUpdateColorsBtn = document.getElementById(
                 "button-cards-update-colors-btn",
             );
             elemButtonCardsUpdateColorsBtn.disabled = true;
 
-            const elemConnectionStatus =
+            window.elemConnectionStatus =
                 document.getElementById("connection-status");
 
-            const elemsButtonCardErrorMsg = [
+            window.elemsButtonCardErrorMsg = [
                 document.getElementById("button-card-error-msg-1"),
                 document.getElementById("button-card-error-msg-2"),
                 document.getElementById("button-card-error-msg-3"),
             ];
 
-            const elemWsLogMessages =
+            window.elemWsLogMessages =
                 document.getElementById("ws-log-messages");
 
             // Color
             // -----
 
-            const elemsColorHexInput = [
+            window.elemsColorHexInput = [
                 document.getElementById("color-hex-input-1"),
                 document.getElementById("color-hex-input-2"),
                 document.getElementById("color-hex-input-3"),
@@ -860,7 +860,7 @@
                 borderWidth: 2,
                 borderColor: "#fff",
             };
-            const elemsColorPicker = [
+            window.elemsColorPicker = [
                 new iro.ColorPicker("#color-picker-1", {
                     ...pickerOptions,
                     color: elemsColorHexInput[0].value,
@@ -878,19 +878,19 @@
             // Audio
             // -----
 
-            const elemsAudioInput = [
+            window.elemsAudioInput = [
                 document.getElementById("audio-input-1"),
                 document.getElementById("audio-input-2"),
                 document.getElementById("audio-input-3"),
             ];
 
-            const elemsAudioPlayBtn = [
+            window.elemsAudioPlayBtn = [
                 document.getElementById("audio-play-btn-1"),
                 document.getElementById("audio-play-btn-2"),
                 document.getElementById("audio-play-btn-3"),
             ];
 
-            const elemsAudioTitle = [
+            window.elemsAudioTitle = [
                 document.getElementById("audio-title-1"),
                 document.getElementById("audio-title-2"),
                 document.getElementById("audio-title-3"),
@@ -899,30 +899,30 @@
             // Spotify
             // -------
 
-            const elemSpotifyConnectBtn = document.getElementById(
+            window.elemSpotifyConnectBtn = document.getElementById(
                 "spotify-connect-btn",
             );
 
-            const elemsSpotifyIcon = [
+            window.elemsSpotifyIcon = [
                 document.getElementById("spotify-icon-1"),
                 document.getElementById("spotify-icon-2"),
                 document.getElementById("spotify-icon-3"),
             ];
 
             // Modal elements
-            const elemSpotifyModalContainer = document.getElementById(
+            window.elemSpotifyModalContainer = document.getElementById(
                 "spotify-modal-container",
             );
-            const elemSpotifyModalCloseBtn = document.getElementById(
+            window.elemSpotifyModalCloseBtn = document.getElementById(
                 "spotify-modal-close-btn",
             );
-            const elemSpotifySearchResults = document.getElementById(
+            window.elemSpotifySearchResults = document.getElementById(
                 "spotify-search-results",
             );
-            const elemSpotifySearchInput = document.getElementById(
+            window.elemSpotifySearchInput = document.getElementById(
                 "spotify-search-input",
             );
-            const elemSpotifySearchButton = document.getElementById(
+            window.elemSpotifySearchButton = document.getElementById(
                 "spotify-search-button",
             );
 
@@ -933,9 +933,9 @@
             // -----
 
             [0, 1, 2].forEach((buttonNum) => {
-                const elemColorPicker = elemsColorPicker[buttonNum];
-                const elemColorHexInput = elemsColorHexInput[buttonNum];
-                const elemButtonCardErrorMsg =
+                window.elemColorPicker = elemsColorPicker[buttonNum];
+                window.elemColorHexInput = elemsColorHexInput[buttonNum];
+                window.elemButtonCardErrorMsg =
                     elemsButtonCardErrorMsg[buttonNum];
 
                 // Update color hex input when the enter key is pressed
