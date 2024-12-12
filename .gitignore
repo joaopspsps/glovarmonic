@@ -1,0 +1,9 @@
+/.pio/
+/.venv/
+
+# Generated from /assets/
+/data/
+
+# Wifi credentials
+/assets/wifi_psk
+/assets/wifi_ssid
