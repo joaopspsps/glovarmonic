@@ -931,9 +931,9 @@
             // -----
 
             [0, 1, 2].forEach((buttonNum) => {
-                window.elemColorPicker = elemsColorPicker[buttonNum];
-                window.elemColorHexInput = elemsColorHexInput[buttonNum];
-                window.elemButtonCardErrorMsg =
+                const elemColorPicker = elemsColorPicker[buttonNum];
+                const elemColorHexInput = elemsColorHexInput[buttonNum];
+                const elemButtonCardErrorMsg =
                     elemsButtonCardErrorMsg[buttonNum];
 
                 // Update color hex input when the enter key is pressed
@@ -953,7 +953,7 @@
 
                     try {
                         const rgb = elemColorPicker.color.rgb;
-                        if (colorSendMessage(buttonNum, rgb))
+                        if (colorSendMessage(buttonNum + 1, rgb))
                             elemButtonCardErrorMsg.textContent = "";
                         else
                             elemButtonCardErrorMsg.textContent =
