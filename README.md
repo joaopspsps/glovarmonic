@@ -1,8 +1,8 @@
 # **Glovarmonic**
 
-The glovarmonic is an IoT glove imagined to be used by performers to
-interact with stage elements, such as lights, sound and other props,
-quickly and without interrupting the acting.
+The glovarmonic is an IoT wearable glove with buttons for user
+interaction, an RGB LED for visual feedback, an HTTP server with a
+control panel page, and a WebSockets server for message passing.
 
 Terminology used here:
 
@@ -13,7 +13,7 @@ Terminology used here:
 -   **The program**: the software -- the code running inside the
     glovarmonic's ESP32.
 
-# Hardware
+# The hardware
 
 ## Glovarmonic V0: Development circuit
 
@@ -23,24 +23,41 @@ and to ever be, and is flawless.
 
 https://github.com/user-attachments/assets/f53730a1-ce2b-4adb-94f2-74ebad398d71
 
-Glovarmonic V0: circuit used during development.
+*Glovarmonic V0: circuit used during development.*
 
 ## Glovarmonic V1: Double glove
 
+The glovarmonic V1 is all the components from V0, plus a battery, wires,
+and two gloves. It's the first wearable prototype. Head to [Glovarmonic
+V1 assembly](docs/glovarmonic-v1-assembly/doc.md) for details on the
+assembly procedure.
+
 https://github.com/user-attachments/assets/c52f716f-7a01-4f00-8368-00430fba7791
 
-Glovarmonic V1: covered view.
+*Glovarmonic V1: covered view.*
 
 https://github.com/user-attachments/assets/555f5fd9-0ba8-48a1-84cf-e4e8993f091b
 
-Glovarmonic V1: inside view.
+*Glovarmonic V1: inside view.*
 
-Head to [Glovarmonic V1 assembly](docs/glovarmonic-v1-assembly/doc.md)
-for details on the assembly procedure for this prototype.
-
-# Software
+# The software
 
 ## Sequence diagram
+
+Sequence diagram of a typical user interaction, showing all the features
+of the glovarmonic and the program.
+
+Participants:
+
+-   Glovarmonic: the glove, running the program (as per the terminology)
+-   User: the person wearing the glove
+-   `/glovarmonic`: the glovarmonic control panel page, served by the
+    HTTP server
+-   `/ws`: the WebSockets server endpoint
+-   `/connect_wifi`: the page used to connect the glovarmonic to a WiFi
+    network, served by the HTTP server
+
+The yellow strips are separators for common interactions.
 
 ``` mermaid
 sequenceDiagram
@@ -48,7 +65,6 @@ sequenceDiagram
   actor U as User
   participant glovarmonic as /glovarmonic
   participant ws as /ws
-  %% participant connect_wifi as /connect_wifi
 
   U->>glovarmonic: GET
   glovarmonic-->>ws: Connect to WebSockets server
@@ -120,7 +136,7 @@ exposes the `/ws` URL.
 
 ![](docs/assets/page-glovarmonic.png)
 
-The `/glovarmonic` page.
+*The `/glovarmonic` page.*
 
 The `/glovarmonic` URL is the main page, the control panel of the
 glovarmonic. It allows configuring actions when the glove buttons are
@@ -146,17 +162,17 @@ tracks.
 
 ![](docs/assets/page-glovarmonic-spotify-modal-search.png)
 
-Spotify track search input.
+*Spotify track search input.*
 
 ![](docs/assets/page-glovarmonic-spotify-modal-search-results.png)
 
-Results of the Spotify search.
+*Results of the Spotify search.*
 
 #### `/connect_wifi`
 
 ![](docs/assets/page-connect-wifi.png)
 
-The `/connect_wifi` page.
+*The `/connect_wifi` page.*
 
 The `/connect_wifi` URL allows connecting the ESP32 to a network station
 by passing the SSID and password of the network. When these credentials
@@ -188,12 +204,16 @@ WebSockets client cleanup is run.
 ## Glovarmonic ID
 
 The glovarmonic ID is the hexadecimal number that identifices each
-glovarmonic device. It is obtained from the lower 3 bytes of the ESP32's
-fused MAC address, in little endian order.
+glovarmonic device. It is used for the SSID of the glovarmonic AP when
+in AP mode (e.g., `GlovarmonicAP-F9D108`), and for the mDNS name when in
+station mode (e.g., `glovarmonic-f9d108.local`). It was designed to
+disambiguate between multiple glovarmonics in the same location, while
+still being rememberable.
 
-For example, the MAC address of the ESP32 used in the assembly of the
-glovarmonic V1 prototype is `08:d1:f9:eb:1d:bc`, and its glovarmonic ID
-is `f9d108`.
+This number is obtained from the lower 3 bytes of the ESP32's fused MAC
+address, in little endian order. For example, the MAC address of the
+ESP32 used in the assembly of the glovarmonic V1 prototype is
+`08:d1:f9:eb:1d:bc`, and its glovarmonic ID is `f9d108`.
 
 ## Compile-time filesystem generation
 
@@ -237,7 +257,7 @@ button release instead of press.
 
 The messages that the WebSockets understands are defined in
 `include/ws.hpp`, under the namespace `ws::messages`. Each message is
-prefixed by a 8 byte header that specifies the type of message, followed
+prefixed by a 1-byte header that specifies the type of message, followed
 by a variable-sized payload specific to the type of message.
 
 Messages can be sent on the command line easily by using `websocat`. For
@@ -279,4 +299,12 @@ struct Payload {
 ```
 
 Set the color that is set to the RGB LED when the button number `button`
-is pressed.
+is pressed, where `button` should be either 1, 2 or 3.
+
+# Credits
+
+The authors:
+
+-   [@aryaalcantara](https://github.com/aryaalcantara)
+-   Giovana
+-   [@joaopspsps](https://github.com/joaopspsps)

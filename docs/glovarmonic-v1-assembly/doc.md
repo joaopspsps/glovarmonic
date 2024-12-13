@@ -23,7 +23,7 @@ for this, maybe a bit fragile, but should be enough.
 
 ![](assets/component-push-button.png)
 
-Push buttons we'll be using.
+*Push buttons we'll be using.*
 
 ## RGB LED
 
@@ -32,8 +32,8 @@ The pins will be removed and replaced with soldered wires.
 
 ![](assets/component-rgb-led.jpg)
 
-RGB LED we'll be using (I forgot to take pictures before assembling the
-circuit).
+*RGB LED we'll be using (I forgot to take pictures before assembling the
+circuit).*
 
 ## Wires
 
@@ -45,7 +45,7 @@ to turn them into females.
 
 ![](assets/component-jumper-wires.jpg)
 
-Jumper wires we'll be using to connect the components.
+*Jumper wires we'll be using to connect the components.*
 
 ## Battery
 
@@ -79,7 +79,7 @@ two gloves.
 
 ![](assets/component-battery.jpg)
 
-LiPo battery (3.7V 450mAh) we'll be using.
+*LiPo battery (3.7V 450mAh) we'll be using.*
 
 ## ESP board
 
@@ -89,13 +89,13 @@ bought. It was also on discount (and it's probably not original).
 
 ![](assets/component-wemos-lolin32-lite.png)
 
-Wemos Lolin32 Lite board we'll be using.
+*Wemos Lolin32 Lite board we'll be using.*
 
 # Assembly schematic
 
 ![](assets/glove-assembly-schematics.png)
 
-Glovarmonic V1 assembly schematic.
+*Glovarmonic V1 assembly schematic.*
 
 1.  The buttons will be placed on the fingertips, kept in place by
     sticking the legs into the fabric and making two hooks, and
@@ -157,11 +157,11 @@ glove. If that happens, undo the thread and try again.
 
 ![](assets/component-rgb-led.jpg)
 
-RGB LED sewn into the glove through its mounting holes.
+*RGB LED sewn into the glove through its mounting holes.*
 
 ![](assets/esp32-sewn.jpg)
 
-ESP32 sewn into the glove through its mounting holes.
+*ESP32 sewn into the glove through its mounting holes.*
 
 ## Battery pocket
 
@@ -180,10 +180,10 @@ you can access the inside of the glove more easily.
 
 ![](assets/battery-pocket.jpg)
 
-Battery pocket. I used a backstitch for this. I followed the
+*Battery pocket. I used a backstitch for this. I followed the
 instructions on this video, with no previous sewing experience:
-<https://www.youtube.com/watch?v=ZvzMMcKHVR4>. Of course, I practiced a
-bit on a test fabric first before moving to the real thing.
+<https://www.youtube.com/watch?v=ZvzMMcKHVR4>. Of course, it helps to
+practice a bit on a test fabric first before moving to the real thing.*
 
 ## Jumper wires preparation (optional)
 
@@ -192,23 +192,23 @@ on male connectors to turn them into female connectors.
 
 ![](assets/jumper-pin-removal-1.jpg)
 
-Use a knife to raise the "lock" on the protector.
+*Use a knife to raise the "lock" on the protector.*
 
 ![](assets/jumper-pin-removal-2.jpg)
 
-Once it's raised, the protector can be easily pulled off the cable.
+*Once it's raised, the protector can be easily pulled off the cable.*
 
 ![](assets/jumper-pin-removal-3.jpg)
 
-Use pliers to wiggle the pin and break it out of the cable.
+*Use pliers to wiggle the pin and break it out of the cable.*
 
 ![](assets/jumper-pin-removal-4.jpg)
 
-After removing the pin, you'll have some free space to insert external
+*After removing the pin, you'll have some free space to insert external
 pins. For some jumper wires this space can be very tight, or the head of
 the connector can get bent after wiggling, which prevents external pin
 insertion. To fix this use pliers to widen the gap in the connector, or
-bend the head of the connector back to normal.
+bend the head of the connector back to normal.*
 
 After that, put the protector back and push the lock back in place.
 
@@ -216,22 +216,26 @@ After that, put the protector back and push the lock back in place.
 
 ![](assets/push-button-preparation-1.jpg)
 
-After removing the protectors from the jumper wires, attach them to the
-push button legs. Solder them together.
+*Use pliers to flatten the legs of the buttons.*
 
 ![](assets/push-button-preparation-2.jpg)
 
-Use heat shrink tubing or electrical tape to protect the connections.
+*After removing the protectors from the jumper wires, attach them to the
+push button legs. Solder them together.*
 
 ![](assets/push-button-preparation-3.jpg)
 
-Stick the other legs of the button into the glove, and bend them into
-hooks to fix the button in place.
+*Use heat shrink tubing or electrical tape to protect the connections.*
 
 ![](assets/push-button-preparation-4.jpg)
 
-Once the this procedure has been applied to all buttons, bring the wires
-behind the fingers, onto the back of the hand.
+*Stick the other legs of the button into the glove, and bend them into
+hooks to fix the button in place.*
+
+![](assets/push-button-preparation-5.jpg)
+
+*Once the this procedure has been applied to all buttons, bring the wires
+behind the fingers, onto the back of the hand.*
 
 ## Splicing GND wires together
 
@@ -240,29 +244,29 @@ LED, and another to be connected to the board's GND pin.
 
 ![](assets/splicing-gnd-wires-1.jpg)
 
-Strip the ends of the wires to expose the copper strands.
+*Strip the ends of the wires to expose the copper strands.*
 
 ![](assets/splicing-gnd-wires-2.jpg)
 
-Gather the wires together facing the same direction. Four wires from the
-components (buttons + RGB LED), another wire for the board's GND pin.
+*Gather the wires together facing the same direction. Four wires from the
+components (buttons + RGB LED), another wire for the board's GND pin.*
 
 ![](assets/splicing-gnd-wires-3.jpg)
 
-Twist them together.
+*Twist them together.*
 
 ![](assets/splicing-gnd-wires-4.jpg)
 
-Maybe bend it too.
+*Maybe bend it too.*
 
 ![](assets/splicing-gnd-wires-5.jpg)
 
-Use heat shrink tubinng (or electrical tape) to protect the exposed
-copper strands.
+*Use heat shrink tubinng (or electrical tape) to protect the exposed
+copper strands.*
 
 ![](assets/splicing-gnd-wires-6.jpg)
 
-The final result after shrinking the tubing.
+*The final result after shrinking the tubing.*
 
 ## Cable management
 
@@ -274,7 +278,7 @@ the glove. Admittedly, this could be more tidy.
 
 ![](assets/cable-management.jpg)
 
-Cable management.
+*Cable management.*
 
 ## Cover it with another glove
 
