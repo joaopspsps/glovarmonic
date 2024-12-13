@@ -94,16 +94,16 @@ bought. It was also on discount (and it's probably not original).
 
 # Summary of prices
 
-  Item                              Amount        Price
-  ------------------------------- -------- ------------
-  Wemos Lolin32 Lite board               1    R\$ 36,95
-  LiPo battery 450mAh                    1    R\$ 30,88
-  RGB LED module                         1   R\$ \~1,80
-  Push buttons                           3     R\$ 0.54
-  Jump wires (female-to-female)         40   R\$ \~9,40
-  Soldering kit                          1    R\$ 73,79
-  Sewing thread                          1   R\$ \~1,50
-  Gloves                                 4    R\$ 60,00
+| Item                          | Amount | Price     |
+|:------------------------------|-------:|----------:|
+| Wemos Lolin32 Lite board      |      1 |  R$ 36,95 |
+| LiPo battery 450mAh           |      1 |  R$ 30,88 |
+| RGB LED module                |      1 |  R$ ~1,80 |
+| Push buttons                  |      3 |   R$ 0.54 |
+| Jump wires (female-to-female) |     40 |  R$ ~9,40 |
+| Soldering kit                 |      1 |  R$ 73,79 |
+| Sewing thread                 |      1 |  R$ ~1,50 |
+| Gloves                        |      4 |  R$ 60,00 |
 
 Total price: R\$ 214.86
 
