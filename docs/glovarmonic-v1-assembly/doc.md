@@ -27,8 +27,9 @@ for this, maybe a bit fragile, but should be enough.
 
 ## RGB LED
 
-We'll use an RGB LED module that comes attached to a PCB and some pins.
-The pins will be removed and replaced with soldered wires.
+We'll use an RGB LED module, with pins for each R, G and B color
+component and another for GND (common cathode). The pins will be removed
+and replaced with soldered wires.
 
 ![](assets/component-rgb-led.jpg)
 
@@ -37,15 +38,15 @@ circuit).*
 
 ## Wires
 
-We'll salvage and use jumper wires to connect the components, because
-they already have handy connectors and are easy to splice together due
-to stranded copper inside. We didn't have female-to-female jumper wires,
-but it's easy to ~~castrate~~ remove the pins from the male connectors
-to turn them into females.
+We'll salvage and use jump wires to connect the components, because they
+already have handy connectors and are easy to splice together due to
+stranded copper inside. We didn't have female-to-female jump wires, but
+it's easy to ~~castrate~~ remove the pins from the male connectors to
+turn them into females.
 
-![](assets/component-jumper-wires.jpg)
+![](assets/component-jump-wires.jpg)
 
-*Jumper wires we'll be using to connect the components.*
+*Jump wires we'll be using to connect the components.*
 
 ## Battery
 
@@ -91,6 +92,33 @@ bought. It was also on discount (and it's probably not original).
 
 *Wemos Lolin32 Lite board we'll be using.*
 
+# Summary of prices
+
+  Item                              Amount        Price
+  ------------------------------- -------- ------------
+  Wemos Lolin32 Lite board               1    R\$ 36,95
+  LiPo battery 450mAh                    1    R\$ 30,88
+  RGB LED module                         1   R\$ \~1,80
+  Push buttons                           3     R\$ 0.54
+  Jump wires (female-to-female)         40   R\$ \~9,40
+  Soldering kit                          1    R\$ 73,79
+  Sewing thread                          1   R\$ \~1,50
+  Gloves                                 4    R\$ 60,00
+
+Total price: R\$ 214.86
+
+Notes:
+
+-   The items are based on what was actually to assemble the glove, but
+    it's a good idea to get some spare items if possible.
+-   Prices are in [Brazilian
+    reais](https://en.wikipedia.org/wiki/Brazilian_real).
+-   The price column is already calculated with respect for the amount.
+-   Prices prefixed with "\~" are estimated because the item was not
+    bought directly or we already had it.
+-   This doesn't account for other common tools, such as pliers,
+    scissors, etc.
+
 # Assembly schematic
 
 ![](assets/glove-assembly-schematics.png)
@@ -99,7 +127,7 @@ bought. It was also on discount (and it's probably not original).
 
 1.  The buttons will be placed on the fingertips, kept in place by
     sticking the legs into the fabric and making two hooks, and
-    solredered to the jumper wires soldered to the legs (more details on
+    solredered to the jump wires soldered to the legs (more details on
     that later).
 2.  The RGB LED is at the back of the palm, closer to the first knuckle,
     sewn to the glove through its mounting holes.
@@ -187,25 +215,25 @@ practice a bit on a test fabric first before moving to the real thing.*
 
 ## Jumper wires preparation (optional)
 
-If you don't have female-to-female jumper wires, you can remove the pins
+If you don't have female-to-female jump wires, you can remove the pins
 on male connectors to turn them into female connectors.
 
-![](assets/jumper-pin-removal-1.jpg)
+![](assets/jump-wire-pin-removal-1.jpg)
 
 *Use a knife to raise the "lock" on the protector.*
 
-![](assets/jumper-pin-removal-2.jpg)
+![](assets/jump-wire-pin-removal-2.jpg)
 
 *Once it's raised, the protector can be easily pulled off the cable.*
 
-![](assets/jumper-pin-removal-3.jpg)
+![](assets/jump-wire-pin-removal-3.jpg)
 
 *Use pliers to wiggle the pin and break it out of the cable.*
 
-![](assets/jumper-pin-removal-4.jpg)
+![](assets/jump-wire-pin-removal-4.jpg)
 
 *After removing the pin, you'll have some free space to insert external
-pins. For some jumper wires this space can be very tight, or the head of
+pins. For some jump wires this space can be very tight, or the head of
 the connector can get bent after wiggling, which prevents external pin
 insertion. To fix this use pliers to widen the gap in the connector, or
 bend the head of the connector back to normal.*
@@ -220,7 +248,7 @@ After that, put the protector back and push the lock back in place.
 
 ![](assets/push-button-preparation-2.jpg)
 
-*After removing the protectors from the jumper wires, attach them to the
+*After removing the protectors from the jump wires, attach them to the
 push button legs. Solder them together.*
 
 ![](assets/push-button-preparation-3.jpg)
@@ -234,8 +262,8 @@ hooks to fix the button in place.*
 
 ![](assets/push-button-preparation-5.jpg)
 
-*Once the this procedure has been applied to all buttons, bring the wires
-behind the fingers, onto the back of the hand.*
+*Once the this procedure has been applied to all buttons, bring the
+wires behind the fingers, onto the back of the hand.*
 
 ## Splicing GND wires together
 
@@ -248,8 +276,9 @@ LED, and another to be connected to the board's GND pin.
 
 ![](assets/splicing-gnd-wires-2.jpg)
 
-*Gather the wires together facing the same direction. Four wires from the
-components (buttons + RGB LED), another wire for the board's GND pin.*
+*Gather the wires together facing the same direction. Four wires from
+the components (buttons + RGB LED), another wire for the board's GND
+pin.*
 
 ![](assets/splicing-gnd-wires-3.jpg)
 
