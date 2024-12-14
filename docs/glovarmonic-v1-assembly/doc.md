@@ -92,18 +92,31 @@ bought. It was also on discount (and it's probably not original).
 
 *Wemos Lolin32 Lite board we'll be using.*
 
+[^1]: There are components that can be used to charge a battery without
+    an ESP board, such as a TP4056 battery charger module. We could
+    solder some wires around and use the module's USB connector to
+    charge the battery, but there are still no protections against
+    simultaneous battery and ESP board USB powering. We could use some
+    [Schottky diodes](https://en.wikipedia.org/wiki/Schottky_diode) for
+    that, but that seems a bit too much for this prototype. Also,
+    depending on the battery, you have to make a surgery on the TP4056
+    and replace a very tiny resistor labeled R3 so your battery doesn't
+    get overcharged. I do not have the skill for this yet, nor the time.
+
+---
+
 # Summary of prices
 
-| Item                          | Amount | Price     |
-|:------------------------------|-------:|----------:|
-| Wemos Lolin32 Lite board      |      1 |  R$ 36,95 |
-| LiPo battery 450mAh           |      1 |  R$ 30,88 |
-| RGB LED module                |      1 |  R$ ~1,80 |
-| Push buttons                  |      3 |   R$ 0.54 |
-| Jump wires (female-to-female) |     40 |  R$ ~9,40 |
-| Soldering kit                 |      1 |  R$ 73,79 |
-| Sewing thread                 |      1 |  R$ ~1,50 |
-| Gloves                        |      4 |  R$ 60,00 |
+| Item                          | Amount |      Price |
+|:------------------------------|-------:|-----------:|
+| Wemos Lolin32 Lite board      |      1 |  R\$ 36,95 |
+| LiPo battery 450mAh           |      1 |  R\$ 30,88 |
+| RGB LED module                |      1 | R\$ \~1,80 |
+| Push buttons                  |      3 |   R\$ 0.54 |
+| Jump wires (female-to-female) |     40 | R\$ \~9,40 |
+| Soldering kit                 |      1 |  R\$ 73,79 |
+| Sewing thread                 |      1 | R\$ \~1,50 |
+| Gloves                        |      4 |  R\$ 60,00 |
 
 Total price: R\$ 214.86
 
@@ -118,6 +131,8 @@ Notes:
     bought directly or we already had it.
 -   This doesn't account for other common tools, such as pliers,
     scissors, etc.
+
+------------------------------------------------------------------------
 
 # Assembly schematic
 
@@ -141,6 +156,8 @@ Notes:
     glove, along with a kind of strap in front of the pocket opening so
     it doesn't fall off.
 
+------------------------------------------------------------------------
+
 # ESP32 Pinout
 
 -   Pin 12 ⇄ Index finger button
@@ -153,6 +170,8 @@ Notes:
 
 The 12, 14 and 27 pins can be connected to either the left or right legs
 of the buttons; the other leg will be connected to GND.
+
+------------------------------------------------------------------------
 
 # Procedures
 
@@ -317,14 +336,3 @@ have to squeeze through inside the glove, potentially damaging
 components or scratching the glove. After the fingers are inserted,
 *un*wear the inner glove and unroll the sleeve of the outer glove more
 easily now.
-
-[^1]: There are components that can be used to charge a battery without
-    an ESP board, such as a TP4056 battery charger module. We could
-    solder some wires around and use the module's USB connector to
-    charge the battery, but there are still no protections against
-    simultaneous battery and ESP board USB powering. We could use some
-    [Schottky diodes](https://en.wikipedia.org/wiki/Schottky_diode) for
-    that, but that seems a bit too much for this prototype. Also,
-    depending on the battery, you have to make a surgery on the TP4056
-    and replace a very tiny resistor labeled R3 so your battery doesn't
-    get overcharged. I do not have the skill for this yet, nor the time.
