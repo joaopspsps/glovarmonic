@@ -242,7 +242,7 @@ After that, put the protector back and push the lock back in place.
 
 ## Push buttons preparation
 
-![](assets/push-button-preparation-1.jpg)
+![](assets/push-button-preparation-1.png)
 
 *Use pliers to flatten the legs of the buttons.*
 
